@@ -1,12 +1,12 @@
-# 🏡 USA Housing Price Predictor - Linear Regression
+# 🏡 USA Housing Price Predictor - Flask Web App
 
-This project uses a **linear regression** model to predict housing prices based on various socioeconomic and geographic features from the USA Housing dataset.
+This project is a **Flask web application** that uses a **linear regression** model to predict housing prices based on various socioeconomic and geographic features from the USA Housing dataset.
 
 ---
 
 ## 🔍 Project Overview
 
-- **Goal**: Predict the price of a house based on input features.
+- **Goal**: Predict the price of a house based on input features via a web interface.
 - **Algorithm**: Linear Regression
 - **Dataset**: `USA_Housing.csv` (commonly available from public datasets or platforms like Kaggle)
 
@@ -16,17 +16,18 @@ This project uses a **linear regression** model to predict housing prices based 
 
 The model uses the following features to predict housing price:
 
-- `Income`: Average Area Income  
-- `House_Age`: Average Age of Houses in the Area  
-- `Rooms`: Average Number of Rooms  
-- `Bedrooms`: Average Number of Bedrooms  
-- `Population`: Area Population  
+- `Income`: Average Area Income
+- `House_Age`: Average Age of Houses in the Area
+- `Rooms`: Average Number of Rooms
+- `Bedrooms`: Average Number of Bedrooms
+- `Population`: Area Population
 
 ---
 
 ## 🛠 Technologies Used
 
 - Python
+- Flask
 - Pandas
 - NumPy
 - Scikit-learn
@@ -40,10 +41,39 @@ The model uses the following features to predict housing price:
 
 ---
 
-## 📥 How to Use
+## 🚀 How to Run
 
-1. Clone the repo or download the `.py` file.
-2. Make sure `USA_Housing.csv` is present in the same folder or update the file path.
-3. Run the script:
+1. Clone the repo or download the files.
+2. Install dependencies:
    ```bash
-   python linear_model.py
+   pip install -r requirements.txt
+   ```
+3. Make sure `USA_Housing.csv` is present in the same folder.
+4. Run the Flask app:
+   ```bash
+   python app.py
+   ```
+5. Open your browser and go to `http://127.0.0.1:5000/`
+
+---
+
+## 🌐 Web Interface
+
+- **Home Page**: Form to input house features
+- **Prediction Page**: Displays the predicted price
+
+---
+
+## 📁 Project Structure
+
+```
+House-price-predictor/
+├── app.py                 # Flask application
+├── linear.py              # Original script
+├── USA_Housing.csv        # Dataset
+├── requirements.txt       # Dependencies
+├── templates/
+│   ├── index.html         # Input form
+│   └── result.html        # Prediction result
+└── README.md              # This file
+```
